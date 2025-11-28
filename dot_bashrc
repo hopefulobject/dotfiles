@@ -1,0 +1,21 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='eza'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[ -f /home/ibrahim/.dart-cli-completion/bash-config.bash ] && . /home/ibrahim/.dart-cli-completion/bash-config.bash || true
+## [/Completion]
+. "$HOME/.cargo/env"
+
+# opencode
+export PATH=/home/ibrahim/.opencode/bin:$PATH

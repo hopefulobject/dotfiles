@@ -1,0 +1,13 @@
+keybind = shift+enter=text:\x1b\r
+
+theme = Catppuccin Mocha
+
+confirm-close-surface = false
+
+font-size = 16
+
+resize-overlay = never
+
+command = zellij -l compact
+
+shell-integration = fish

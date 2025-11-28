@@ -1,0 +1,51 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] ; then
+	exec sway
+fi
+
+. "$HOME/.local/bin/env"
+
+export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
+export PATH="$PATH:/home/ibrahim/.cargo/bin"
+export MANPATH="$MANPATH:/usr/local/texlive/2025/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2025/texmf-dist/doc/info"
+
+
+export EDITOR="nvim"
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+
+
+
+
+
+# opencode
+export PATH=/home/ibrahim/.opencode/bin:$PATH
+
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+eval "$(direnv hook bash)"
+
+# pnpm
+export PNPM_HOME="/home/ibrahim/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+#pnpm end
+. "$HOME/.cargo/env"
