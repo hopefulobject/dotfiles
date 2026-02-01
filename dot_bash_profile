@@ -49,3 +49,19 @@ esac
 
 #pnpm end
 . "$HOME/.cargo/env"
+
+# Flutter
+export PATH=/home/ibrahim/builds/flutter/bin:$PATH
+
+
+
+export PATH="$HOME/.elan/bin:$PATH"
+
+
+# Added by Toolbox App
+export PATH="$PATH:/home/ibrahim/.local/share/JetBrains/Toolbox/scripts"
+
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

@@ -15,7 +15,19 @@ PS1='[\u@\h \W]\$ '
 ## Completion scripts setup. Remove the following line to uninstall
 [ -f /home/ibrahim/.dart-cli-completion/bash-config.bash ] && . /home/ibrahim/.dart-cli-completion/bash-config.bash || true
 ## [/Completion]
-. "$HOME/.cargo/env"
+ . "$HOME/.cargo/env"
 
 # opencode
 export PATH=/home/ibrahim/.opencode/bin:$PATH
+source /usr/share/nvm/init-nvm.sh
+export PATH=/home/ibrahim/.local/bin:$PATH
+export PATH=/home/ibrahim/builds/flutter/bin:$PATH
+export PATH=/home/ibrahim/.elan/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/ibrahim/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
