@@ -11,8 +11,8 @@ exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY WAYLAN
 set $browser zen-browser
 set $terminal ghostty
 
-exec swaymsg workspace number 3
-exec code /home/ibrahim/projects/Stirrup/stirrup
+exec swaymsg workspace number 2
+exec ghostty
 
 
 bindsym $mod+s exec slurp | grim -g - - | wl-copy
